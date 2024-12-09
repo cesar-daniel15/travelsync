@@ -9,5 +9,9 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
+  },  {
+    path: 'favorite-trips',
+    loadComponent: () => import('./favorite-trips/favorite-trips.page').then( m => m.FavoriteTripsPage)
   },
+
 ];
