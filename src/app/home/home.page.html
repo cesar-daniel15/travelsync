@@ -1,11 +1,11 @@
 <ion-header color="primary">
   <ion-toolbar>
-
     <ion-buttons slot="start">
-      <ion-img src="assets/icon/favicon.png" style="width: 50px; height: 50px; margin-right: 2px;"></ion-img>
-      <ion-title id="title">
-        TravelSync
-      </ion-title>
+      <ion-img
+        src="assets/icon/favicon.png"
+        style="width: 50px; height: 50px; margin-right: 2px;"
+      ></ion-img>
+      <ion-title id="title">TravelSync</ion-title>
     </ion-buttons>
 
     <ion-buttons slot="end">
@@ -16,9 +16,14 @@
         <ion-select-option value="fr">Français</ion-select-option>
       </ion-select>
     </ion-buttons>
-    
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <div class="welcome-container">
+    <h1>Bem-vindo ao TravelSync!</h1>
+    <p>Planeje suas viagens favoritas de forma fácil e intuitiva.</p>
+  </div>
 </ion-content>
+
+<app-footer></app-footer>

@@ -28,3 +28,21 @@ ion-toolbar {
   width: 50px; /* Tamanho das imagens de History */
   border-radius: 10px;
 }
+
+.welcome-container {
+  text-align: center;
+  margin-top: 50px;
+
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+}

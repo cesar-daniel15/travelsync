@@ -1,0 +1,36 @@
+.custom-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px 15px 0 0;
+}
+
+.custom-toolbar {
+  --background: transparent;
+  padding: 10px;
+}
+
+.custom-segment {
+  display: flex;
+  justify-content: space-around;
+  --indicator-background: transparent; /* Remove linha de seleção padrão */
+}
+
+ion-segment-button {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-icon {
+  font-size: 24px;
+  color: #c4c4c4;
+}
+
+ion-segment-button[ng-reflect-value="home"].ion-activated .footer-icon {
+  color: #007aff; /* Cor azul para o ícone ativo */
+}

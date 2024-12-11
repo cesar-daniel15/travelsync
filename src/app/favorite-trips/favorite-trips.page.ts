@@ -16,6 +16,7 @@ import {
   IonLabel,
   IonSelectOption 
 } from '@ionic/angular/standalone';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-favorite-trips',
@@ -38,7 +39,8 @@ import {
     IonCardContent,
     IonSelect,
     IonLabel,
-    IonSelectOption 
+    IonSelectOption,
+    FooterComponent 
   ],
 })
 export class FavoriteTripsPage {
