@@ -1,0 +1,32 @@
+/* Header (imagem e título) */
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2D9CDB;
+}
+
+.header-title-highlight {
+  color: #27AE60;
+}
+
+/* Rodapé */
+ion-tab-bar {
+  --background: #f4f4f4; /* Fundo do rodapé */
+  --color: #333;         /* Cor padrão dos ícones e texto */
+}
+
+ion-tab-button {
+  --color-selected: #2D9CDB; /* Cor quando selecionado */
+  font-size: 14px;
+}
