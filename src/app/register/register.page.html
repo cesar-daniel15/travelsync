@@ -1,21 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <div style="display: flex; align-items: center; justify-content: space-between;">
-      <div style="display: flex; align-items: center;">
-        <ion-img src="assets/icon/favicon.png" style="width: 40px; height: 40px; margin-right: 8px;"></ion-img>
-        <span class="header-title">
-          Travel<span class="header-title-highlight">Sync</span>
-        </span>
-      </div>
-      <ion-select placeholder="Idioma" interface="popover">
-        <ion-select-option value="pt">Português</ion-select-option>
+    <ion-buttons slot="start">
+      <ion-img src="assets/icon/favicon.png" style="width: 50px; height: 50px;"></ion-img>
+      <span class="header-title">
+        Travel<span class="header-title-highlight">Sync</span>
+      </span>    
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-select placeholder="English" interface="popover">
         <ion-select-option value="en">English</ion-select-option>
+        <ion-select-option value="pt">Português</ion-select-option>
         <ion-select-option value="es">Español</ion-select-option>
-        <ion-select-option value="fr">Français</ion-select-option>
       </ion-select>
-    </div>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
 
 <ion-content class="ion-padding">
   <div class="container">
