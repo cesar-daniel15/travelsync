@@ -1,17 +1,6 @@
-/* Header (imagem e título) */
-.header-container {
-  display: flex;
-  align-items: center;
-}
-
-.header-logo {
-  width: 40px;
-  height: 40px;
-  margin-right: 8px;
-}
-
+/* Estilos do Cabeçalho */
 .header-title {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   color: #2D9CDB;
 }
@@ -20,13 +9,37 @@
   color: #27AE60;
 }
 
-/* Rodapé */
-ion-tab-bar {
-  --background: #f4f4f4; /* Fundo do rodapé */
-  --color: #333;         /* Cor padrão dos ícones e texto */
+/* Ajustes gerais dos inputs */
+ion-item {
+  --padding-start: 12px; /* Aumentei o padding lateral */
+  --padding-end: 12px;
+  margin: 12px 0; /* Maior espaçamento entre os itens */
+  border-radius: 8px;
+  --background: #F7F9FC;
+  --border-color: #E0E0E0;
+  --border-width: 1px;
+  --min-height: 55px; /* Aumentei a altura mínima */
 }
 
-ion-tab-button {
-  --color-selected: #2D9CDB; /* Cor quando selecionado */
-  font-size: 14px;
+ion-item ion-icon {
+  font-size: 20px;
+}
+
+/* Botão de registro */
+ion-button {
+  font-size: 18px;
+  font-weight: bold;
+  --background: #6EC1E4; /* Azul mais claro */
+  --color: #FFFFFF; /* Letras brancas */
+  --border-radius: 25px;
+  padding: 12px 16px; /* Padding no botão */
+}
+
+ion-button:hover {
+  filter: brightness(95%);
+}
+
+/* Ajustes gerais */
+.container {
+  padding: 0 16px; /* Padding geral da página */
 }

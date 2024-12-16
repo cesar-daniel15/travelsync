@@ -1,53 +1,51 @@
 <ion-header>
   <ion-toolbar>
-    <div style="display: flex; align-items: center;">
-      <!-- Ícone -->
-      <ion-img
-        src="assets/icon/favicon.png" style="width: 40px; height: 40px; margin-right: 8px;"
-        alt="Logo">
-      </ion-img>
-
-      <!-- Título -->
-      <span class="header-title">
-        Travel<span class="header-title-highlight">Sync</span>
-      </span>
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+      <div style="display: flex; align-items: center;">
+        <ion-img src="assets/icon/favicon.png" style="width: 40px; height: 40px; margin-right: 8px;"></ion-img>
+        <span class="header-title">
+          Travel<span class="header-title-highlight">Sync</span>
+        </span>
       </div>
-
-    <!-- Seleção de Idiomas -->
-    <ion-buttons slot="end">
       <ion-select placeholder="Idioma" interface="popover">
         <ion-select-option value="pt">Português</ion-select-option>
         <ion-select-option value="en">English</ion-select-option>
         <ion-select-option value="es">Español</ion-select-option>
         <ion-select-option value="fr">Français</ion-select-option>
       </ion-select>
-    </ion-buttons>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
   <div class="container">
+
     <!-- Localização -->
     <ion-item>
-      <ion-label position="stacked">Localização</ion-label>
-      <ion-input placeholder="Digite a localização"></ion-input>
-      <ion-icon slot="end" name="locate-outline"></ion-icon>
+      <ion-icon slot="start" name="locate-outline" color="medium"></ion-icon>
+      <ion-input placeholder="Localização"></ion-input>
     </ion-item>
 
-    <!-- Data -->
-    <ion-item>
-      <ion-label position="stacked">Data</ion-label>
+    <!-- Selecionar Data -->
+    <ion-item button (click)="toggleDatePicker()">
+      <ion-icon slot="start" name="calendar-outline" color="medium"></ion-icon>
+      <ion-label>Selecionar Data</ion-label>
+    </ion-item>
+
+    <!-- Campo de Data -->
+    <ion-item *ngIf="showDatePicker">
+      <ion-icon slot="start" name="calendar-outline" color="medium"></ion-icon>
       <ion-datetime
         presentation="date"
         placeholder="Selecione a Data"
-        display-format="MMM DD, YYYY"
-      ></ion-datetime>
+        display-format="MMM DD, YYYY">
+      </ion-datetime>
     </ion-item>
 
     <!-- Tipo -->
     <ion-item>
-      <ion-label position="stacked">Tipo</ion-label>
-      <ion-select placeholder="Selecione o Tipo">
+      <ion-icon slot="start" name="filter-outline" color="medium"></ion-icon>
+      <ion-select placeholder="Tipo">
         <ion-select-option value="type1">Opção 1</ion-select-option>
         <ion-select-option value="type2">Opção 2</ion-select-option>
       </ion-select>
@@ -55,8 +53,8 @@
 
     <!-- Estado -->
     <ion-item>
-      <ion-label position="stacked">Estado</ion-label>
-      <ion-select placeholder="Selecione o Estado">
+      <ion-icon slot="start" name="location-outline" color="medium"></ion-icon>
+      <ion-select placeholder="Estado">
         <ion-select-option value="state1">Estado 1</ion-select-option>
         <ion-select-option value="state2">Estado 2</ion-select-option>
       </ion-select>
@@ -64,38 +62,37 @@
 
     <!-- Descrição -->
     <ion-item>
-      <ion-label position="stacked">Descrição</ion-label>
-      <ion-textarea placeholder="Adicione uma descrição"></ion-textarea>
+      <ion-icon slot="start" name="document-text-outline" color="medium"></ion-icon>
+      <ion-textarea placeholder="Descrição"></ion-textarea>
     </ion-item>
 
     <!-- Dados Adicionais -->
     <ion-item>
-      <ion-label position="stacked">Dados Adicionais</ion-label>
-      <ion-input placeholder="Digite dados adicionais"></ion-input>
+      <ion-icon slot="start" name="git-branch-outline" color="medium"></ion-icon>
+      <ion-input placeholder="Dados Adicionais"></ion-input>
     </ion-item>
 
-    <!-- Gosto -->
+    <!-- Gostar -->
     <ion-item>
-      <ion-label position="stacked">Gostar</ion-label>
-      <ion-select placeholder="Escolha">
+      <ion-icon slot="start" name="heart-outline" color="medium"></ion-icon>
+      <ion-select placeholder="Gostar">
         <ion-select-option value="yes">Sim</ion-select-option>
         <ion-select-option value="no">Não</ion-select-option>
       </ion-select>
     </ion-item>
 
-    <!-- Adicionar Localizações -->
-    <ion-item>
-      <ion-label position="stacked">Adicionar Localizações</ion-label>
-      <ion-input placeholder="Detalhes da localização"></ion-input>
-    </ion-item>
-
     <!-- Comentários -->
     <ion-item>
-      <ion-label position="stacked">Comentários</ion-label>
-      <ion-textarea placeholder="Adicione comentários"></ion-textarea>
+      <ion-icon slot="start" name="chatbubble-outline" color="medium"></ion-icon>
+      <ion-textarea placeholder="Comentários"></ion-textarea>
     </ion-item>
 
-    <!-- Botão de Registrar -->
-    <ion-button expand="block" color="primary">Registrar</ion-button>
+    <!-- Botão Registrar -->
+    <div class="ion-padding">
+      <ion-button expand="block" color="success" shape="round" size="large">Registrar</ion-button>
+    </div>
+
   </div>
 </ion-content>
+
+<app-footer></app-footer>
