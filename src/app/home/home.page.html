@@ -1,24 +1,49 @@
-<ion-header color="primary">
-  <ion-toolbar>
+<ion-header>
 
-    <ion-buttons slot="start">
-      <ion-img src="assets/icon/favicon.png" style="width: 50px; height: 50px; margin-right: 2px;"></ion-img>
-      <ion-title id="title">
-        TravelSync
-      </ion-title>
-    </ion-buttons>
+  <!--Navbar-->
+  <app-navbar></app-navbar> 
 
-    <ion-buttons slot="end">
-      <ion-select placeholder="Idioma" interface="popover">
-        <ion-select-option value="pt">Português</ion-select-option>
-        <ion-select-option value="en">English</ion-select-option>
-        <ion-select-option value="es">Español</ion-select-option>
-        <ion-select-option value="fr">Français</ion-select-option>
-      </ion-select>
-    </ion-buttons>
-    
-  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
+  <!-- Barra -->
+  <ion-searchbar placeholder="Find things to do" class="search-bar" show-clear-button="focus"></ion-searchbar>
+
+  <!-- Liked -->
+  <div class="liked-section">
+
+    <ion-title id="liked" class="liked">Liked</ion-title>
+
+    <ion-title id="see-all" class="see-all">See All</ion-title>
+  
+  </div>
+
+  <img src="https://i.pinimg.com/originals/b7/05/29/b7052995cf70b66dc99bc0dadae53219.jpg" alt="Image" class="liked-image">  
+
+  <!-- History -->
+  <div class="history-section">
+
+    <ion-title id="history" class="history">History</ion-title>
+
+      <div class="cards">
+
+      <div class="card">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/448684704.jpg?k=af823f6d5b53821e811a5c457783b660e17c4b0bd05036413d165fccc4b50210&o=&hp=1" alt="Image" class="card-image">
+        <h3 class="card-title">Aspen, USA</h3>
+      </div>
+
+      <div class="card">
+        <img src="https://www.polyglotgathering.com/2024/img/photos/prague2.jpg" alt="Image" class="card-image">
+        <h3 class="card-title">Prague, Czech</h3>
+      </div>
+
+    </div>
+
+  </div>
+
+    <!--Footer-->
+    <app-footer></app-footer> 
+  
 </ion-content>
+

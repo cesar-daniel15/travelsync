@@ -1,0 +1,22 @@
+@use '../../../theme/variables' ;
+
+ion-toolbar ion-img {
+    width: 50px;
+    height: 50px;
+}
+
+ion-toolbar #title {
+    background: variables.$color-gradient;
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    font-size: 1.2rem; 
+    font-weight: 550; 
+}
+
+ion-toolbar ion-buttons ion-icon{
+    color: variables.$text-color-secondary;
+    font-size: 2rem; 
+    font-weight: bold;
+    margin-right: 10px; 
+}

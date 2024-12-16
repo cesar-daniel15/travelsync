@@ -1,30 +1,90 @@
-#title {
-  background: linear-gradient(to right, #1381C6 0%, #1381C6 50%, #1CAB7E 50%, #1CAB7E 100%);
-  -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent; 
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem; 
-  font-weight: 600; 
-}
-ion-toolbar {
-  background-color: white;
+@use '../../theme/variables' ;
+
+* {
+    font-family: variables.$font-stack;
+    padding: 10px;
 }
 
-.likes-section, .history-section {
-  padding: 16px;
+ion-header{
+    border:none;
+    box-shadow: none; 
 }
 
-.like-item, .history-item {
-  display: inline-block;
-  margin: 8px;
+ion-content ion-searchbar{
+    background-color: #F3F8FE; 
+    border-radius: 32px;
+    height: 40px; 
+    border: 1px solid #d1e3f8;
+    box-shadow: none; 
+    color: #B8B8B8;
+    padding: 10px;
 }
 
-.like-item img {
-  width: 100px; /* Tamanho das imagens de Likes */
-  border-radius: 10px;
+ion-content .liked-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  margin: 10px 0; 
 }
 
-.history-item img {
-  width: 50px; /* Tamanho das imagens de History */
-  border-radius: 10px;
+ion-content .liked-section ion-title {
+  font-size: 1.3rem; 
+  color: variables.$text-color;
+  font-weight: bold; 
+}
+
+ion-content #see-all {
+  font-size: 15px;
+  font-weight: normal;
+  color: variables.$text-color-secondary; 
+  cursor: pointer; 
+  text-align: right;
+  margin-left: auto;
+}
+
+ion-content .liked-image {
+  width: 180px;
+  height: 220px;
+  margin-top: 10px; 
+  border-radius: 25px;
+  margin-left: 10px;
+}
+
+ion-content .history-section ion-title {
+  font-size: 1.3rem; 
+  color: variables.$text-color;
+  font-weight: bold; 
+}
+
+.history-section {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+}
+
+.history-section .cards {
+  display: flex; 
+  flex-wrap: wrap;
+  gap: 10px; 
+}
+
+.history-section .card {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center;
+  background-color: #F5F5F5;
+  border-radius: 25px;
+}
+
+.history-section .card-image {
+  width: 160px; 
+  height: 110px; 
+  border-radius: 25px; 
+}
+
+.history-section .card-title {
+  font-size: 15px; 
+  color: variables.$text-color; 
+  margin-top: 5px; 
 }
